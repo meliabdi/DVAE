@@ -68,5 +68,5 @@ def calculate_cosine_similarity(autoencoder, patient_data, drug_data):
          encoded_drug_data = autoencoder.predict(drug_profile)
          similarity = cosine_similarity(patient_data, encoded_drug_data)
          similarities.append((drug_name, similarity[0][0]))
-     similarities.sort(key=lambda x: x[1])  # Sort by cosine similarity in ascending order
+     similarities.sort(key=lambda x: x[1])  # ascending order
      return similarities
